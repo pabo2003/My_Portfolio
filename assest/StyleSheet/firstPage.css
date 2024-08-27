@@ -1,0 +1,102 @@
+body{
+    overflow-x: hidden;
+}
+section{
+    position: relative;
+}
+#firstPage{
+    background: black;
+    width: 100%;
+    height: 70vh;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Header Section*/
+#firstPage>header>div>nav>h1{
+    color: white;
+    position: relative;
+    left: 2vw;
+    top: 2vw;
+}
+#firstPage>header>div>p{
+    color: white;
+    position: absolute;
+    left: 35vw;
+    top: 25vh;
+}
+#firstPage>header>div>nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+#firstPage>header>div>nav>ul>li>a:hover {
+    color: deeppink;
+    transition: .4s;
+}
+#firstPage>header>div>nav>ul>li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+#firstPage>header>div>nav>ul{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1vw;
+}
+
+/*Main Section*/
+#Hello{
+    color: white;
+    position: absolute;
+    left: 35vw;
+    top: 10vh;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#firstPage>main>section>h1{
+    color: white;
+    position: absolute;
+    left: 35vw;
+    top: 20vh;
+}
+#Im{
+    color: white;
+    position: absolute;
+    left: 35vw;
+    top: 25vh;
+}
+#firstPage>main>section>h2>span{
+    color:deeppink;
+}
+body>section:first-child>main>section:nth-child(2){
+    position: relative;
+    left: 5vw;
+}
+
+#firstPage > main > section > button {
+    background: deeppink;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: background 0.4s, transform 0.4s; /* Ensure smooth transition for both background and transform */
+    position: absolute;
+    top: 20vh;
+    left: 80vw;
+    box-shadow: 3px 3px 5px white;
+}
+
+#firstPage > main > section > button:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    background: deeppink;
+}
+

@@ -1,0 +1,36 @@
+#aboutMe{
+    background:black;
+    background-size: cover;
+    background-position: center;
+}
+/*Header Section*/
+#aboutMe>header>div>h1{
+    color: white;
+    position: relative;
+    left: 2vw;
+    top: 2vw;
+}
+#aboutMe>header>nav>a{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 5vh;
+    right: 3vw;
+}
+
+/*Main Section*/
+#me{
+    color: white;
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+#aboutMe>main>section>div>p>strong>span{
+    color: red;
+}
