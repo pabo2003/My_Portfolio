@@ -1,36 +1,25 @@
-#aboutMe{
-    background:black;
-    background-size: cover;
-    background-position: center;
-}
-/*Header Section*/
-#aboutMe>header>div>h1{
+.aboutMe>h1{
     color: white;
-    position: relative;
-    left: 2vw;
-    top: 2vw;
+    margin-left: 40px;
 }
-#aboutMe>header>nav>a{
+.aboutMe>p{
     color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 5vh;
-    right: 3vw;
+    margin-left: 50px;
 }
-
-/*Main Section*/
-#me{
-    color: white;
-    width: 50vw;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
-
-#aboutMe>main>section>div>p>strong>span{
+.aboutMe>p>strong>span{
     color: red;
+}
+.photo{
+    width: 1000px;
+    height: 500px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.photo>div{
+    border: 2px solid black;
 }
