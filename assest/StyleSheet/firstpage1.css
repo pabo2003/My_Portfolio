@@ -9,7 +9,7 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
-    background: black;
+    margin: 10px;
 }
 
 .logo{
@@ -18,12 +18,35 @@ body{
 }
 
 nav{
+    position: fixed;
+    top: 0;
+    left: 3vw;
     display: flex;
     width: 84%;
     margin: auto;
     padding: 20px 0;
     align-items: center;
     justify-content: space-between;
+}
+
+.pink{
+    font-size: 50px;
+    font-weight: bolder;
+    color: azure;
+    --color1: #ffc9f3;
+    --color2: #ff93e7;
+    --color3: #ca1f7b;
+    --color4: magenta;
+    --color5: #b81d70;
+    text-shadow:
+            0 0 10px var(--color1),
+            0 0 20px var(--color2),
+            0 0 40px var(--color3),
+            0 0 80px var(--color4),
+            0 0 100px var(--color4);
+    position: absolute;
+    top: 0;
+    left: 40vh;
 }
 
 #main{
@@ -42,23 +65,34 @@ nav>ul>li>a{
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: 1s;
 }
 
 nav>ul>li>a:hover{
-    color: deeppink;
+    font-size: 25px;
+    color: azure;
+    --color1: #ffc9f3;
+    --color2: #ff93e7;
+    --color3: #ca1f7b;
+    --color4: magenta;
+    --color5: #b81d70;
+    text-shadow:
+            0 0 10px var(--color1),
+            0 0 20px var(--color2),
+            0 0 40px var(--color3),
+            0 0 80px var(--color4),
+            0 0 100px var(--color4);
 }
 
 .detal{
-    margin-left: 8%;
-    margin-top: 15%;
+    margin-left: 10%;
+    margin-top: 10%;
     color: white;
 }
 
 .detal>h1{
     font-size: 60px;
     margin-bottom: 15px;
-    animation: bounce;
-    animation-duration: 2s;
 }
 
 .detal>p{
@@ -86,8 +120,6 @@ span{
     margin: 30px 0;
     border-radius: 15px;
     transition: background 0.4s, transform 0.4s;
-    animation: bounce;
-    animation-duration: 2s;
 }
 
 .detal>a:hover{
@@ -106,10 +138,10 @@ span{
     height: 70vh;
     border-radius: 100%;
     position: absolute;
-    right: 1vw;
-    top: 15vh;
-    transform: translateX(-50%);
-    transition: top 1s ,left 1s;
+    right: 6vw;
+    top: -8vh;
+    margin: 0;
+
 }
 
 /*.image>img:hover{
