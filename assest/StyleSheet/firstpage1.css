@@ -57,6 +57,8 @@ nav>ul>li>a:hover{
 .detal>h1{
     font-size: 60px;
     margin-bottom: 15px;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .detal>p{
@@ -84,6 +86,8 @@ span{
     margin: 30px 0;
     border-radius: 15px;
     transition: background 0.4s, transform 0.4s;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .detal>a:hover{

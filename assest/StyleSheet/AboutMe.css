@@ -33,21 +33,23 @@
     color: deeppink;
 }*/
 .photo{
-    width: 90vw;
-    height: 5vh;
+    /*width: 300px;
+    height: 300px;*/
     display: grid;
+    /*
     flex-basis: 50%;
+    */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    position: absolute;
+   /* position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     gap: 10px;
     padding: 10px;
-    background: black;
+    background: black;*/
 }
-.photo>div{
+.photo>div>img{
     border: 2px solid white;
     border-radius: 15%;
     background-position: top;
