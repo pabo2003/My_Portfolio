@@ -19,6 +19,7 @@ body{
 
 nav{
     position: fixed;
+    background: black;
     top: 0;
     left: 3vw;
     display: flex;
@@ -27,26 +28,6 @@ nav{
     padding: 20px 0;
     align-items: center;
     justify-content: space-between;
-}
-
-.pink{
-    font-size: 50px;
-    font-weight: bolder;
-    color: azure;
-    --color1: #ffc9f3;
-    --color2: #ff93e7;
-    --color3: #ca1f7b;
-    --color4: magenta;
-    --color5: #b81d70;
-    text-shadow:
-            0 0 10px var(--color1),
-            0 0 20px var(--color2),
-            0 0 40px var(--color3),
-            0 0 80px var(--color4),
-            0 0 100px var(--color4);
-    position: absolute;
-    top: 0;
-    left: 40vh;
 }
 
 #main{
@@ -59,6 +40,7 @@ nav>ul>li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    z-index: 1000;
 }
 
 nav>ul>li>a{
@@ -136,13 +118,59 @@ span{
 
 .image>img{
     height: 70vh;
+    width: 30vw;
     border-radius: 100%;
     position: absolute;
     right: 6vw;
     top: -8vh;
     margin: 0;
-
+    border: 5px solid deeppink;
+    animation: animi 3000ms infinite;
 }
+
+@keyframes animi {
+    from{
+        width: 200px;
+        height: 200px;
+    }
+    to{
+        width: 35vw;
+    }
+    }
+
+.icon>a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid hotpink;
+    border-radius: 100%;
+    font-size: 20px;
+    color: hotpink;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 1s;
+}
+.icon>a:hover{
+    color: azure;
+    --color1: #ffc9f3;
+    --color2: #ff93e7;
+    --color3: #ca1f7b;
+    --color4: magenta;
+    --color5: #b81d70;
+    text-shadow:
+            0 0 10px var(--color1),
+            0 0 20px var(--color2),
+            0 0 40px var(--color3),
+            0 0 80px var(--color4),
+            0 0 100px var(--color4);
+    background-color: #b81d70;
+    width: 50px;
+    height: 50px;
+}
+
 
 /*.image>img:hover{
     left: 45%;
@@ -155,6 +183,12 @@ span{
         top: 20px;
         left: 5px;
     }
+    .pink{
+        top: 0;
+        left: 80px;
+        font-size: 50px;
+        margin-top: 15px;
+    }
     #main{
         color: white;
         font-weight: bold;
@@ -165,24 +199,34 @@ span{
         margin: 0;
     }
     .image>img{
-        top: 30vh;
-        left: 150px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     nav>ul>li{
-        display: inline-flex;
-        list-style: none;
-        margin: 5px 5px;
-        position: relative;
-        top: 25px;
-        font-size: 10px;
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 0;
     }
     .detal>h1{
-        margin-top: 300px;
+        margin-top: 100px;
     }
 
     .detal>p{
-        font-family: "Nerko One", cursive;
-        font-weight: 400;
-        font-style: normal;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid deeppink;
+        border-radius: 100%;
+        font-size: 20px;
+        color: deeppink;
+        text-decoration: none;
+        margin: 30px 15px 30px 0;
     }
 }
