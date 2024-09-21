@@ -1,3 +1,8 @@
+.aboutMe{
+    position: absolute;
+    top: 103vh;
+    height: auto;
+}
 .aboutMe>h1{
     color: white;
     margin-left: 40px;
@@ -33,7 +38,7 @@
     color: deeppink;
 }*/
 .photo{
-    width: 50vw;
+    width: 60vw;
     height: 40vh;
     display: grid;
     flex-basis: 50%;
@@ -43,6 +48,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    top: 150vh;
     margin: auto;
     gap: 20px;
     padding: 10px;
