@@ -87,7 +87,7 @@ nav>ul>li>a:hover{
     align-items: center;
     justify-content: center;
     gap: 10rem;
-    margin-top: 18vh;
+    margin-top: 13vh;
     margin-left: 20vw;
 }
 
@@ -171,7 +171,6 @@ nav>ul>li>a:hover{
     gap: 3rem;
     align-items: center;
     justify-content: center;
-
 }
 
 .social i{
