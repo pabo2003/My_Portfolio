@@ -27,11 +27,13 @@
     gap: 5rem;
     color: white;
     padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    background: black;
     border-radius: 3rem;
     z-index: 1000;
 }
 .HeaderName{
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: bolder;
     color: white;
     transition: 0.3s ease-in-out;
@@ -76,10 +78,6 @@ li>a::before{
 }
 li>a:hover::before{
     width: 100%
-}
-.Visit_gitHub:hover{
-    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
-    transform: scale(1.1);
 }
 
 #menu-icon{
@@ -135,7 +133,7 @@ li>a:hover::before{
 }
 #i-am-Developer{
     font-size: 2rem;
-    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    background: deeppink;
     background-clip: text;
     color: transparent;
     font-family: "Sofadi One", system-ui;
@@ -219,7 +217,7 @@ li>a:hover::before{
 .section_title{
     text-align: center;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: bold;
     margin-bottom: 3rem;
     color: white;
 }
@@ -272,10 +270,10 @@ li>a:hover::before{
     margin-bottom: 1rem;
 }
 
-.grid_card span{
+.grid_card>span{
     font-size: 1.8rem;
     font-weight: 500;
-    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    background: deeppink;
     background-clip: text;
     color: transparent;
 }
@@ -299,48 +297,172 @@ li>a:hover::before{
     color: black;
 }
 
-/*
-.About-me{
-  color: white;
-  background: black;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: -1.5rem;
-  padding: 130px;
+/*About Me section*/
+.About-me {
+    color: white;
+    background:#1e1f20;;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1.9rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 130px;
+    padding-top: 50px;
 }
 
-.about-img img{
-  position: relative;
-  left: 160px;
-  max-width: 650px;
-  height: auto;
-  width: 100%;
-  border-radius: 20px;
+.about-img{
+    position: relative;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    border: 2px solid white;
+    overflow: hidden;
+}
+.about-img>section{
+    display: flex;
+    width: fit-content;
+    animation: animation-slide 3s infinite alternate;
+}
+.about-img>section>div{
+    width: 50vw;
+    height: 50vh;
+}
+#1>img{
+    /*background: url("assest/images/Innovesta/7.jpg");*/
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(2){
+    background: url("assest/images/2ndSecond.JPG");
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(3){
+    background: url("assest/images/KowulWasanthaya/dance1.JPG");
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(4){
+    background: url("assest/images/Innovesta/1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(5){
+    background: url("assest/images/Innovesta/6.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(6){
+    background: url("assest/images/GrimTheater/3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.about-img>section>div:nth-child(7){
+    background: url("assest/images/GrimTheater/4.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.about-text1 h2{
-  font-size: 80px;
-  line-height: 1;
+.about-text1{
+    margin-top: 5vh;
 }
-.about-text1 h4 {
-font-size: 24px;
-  font-weight: 600;
-  line-height: 1.7rem;
-  margin: 15px 0 30px;
-}
-.about-text1 p{
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 4rem;
-}
-*/
 
-/*
-.Img-my{
-  width: 100px;
+.about-text1 h2 {
+    font-size: 70px;
+    position: relative;
+    top: -69px;
 }
-*/
+
+.about-text1 > h2 > span{
+    background: deeppink;
+    background-clip: text;
+    color: transparent;
+}
+
+.Ijse{
+    color: red;
+    font-weight: 500;
+}
+.about-text1 p {
+    font-size: 25px;
+    font-family: "Sofadi One", system-ui;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 1200px) {
+    .About-me {
+        padding: 100px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img img {
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-text1 h2 {
+        font-size: 50px;
+        top: 0;
+    }
+
+    .about-text1 h4 {
+        font-size: 28px;
+        top: 0;
+    }
+
+    .about-text1 p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .About-me {
+        padding: 60px;
+    }
+
+    .about-text1 h2 {
+        font-size: 40px;
+    }
+
+    .about-text1 h4 {
+        font-size: 24px;
+    }
+
+    .about-text1 p {
+        font-size: 18px;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-me {
+        padding: 40px;
+    }
+
+    .about-text1 h2 {
+        font-size: 32px;
+    }
+
+    .about-text1 h4 {
+        font-size: 20px;
+    }
+
+    .about-text1 p {
+        font-size: 16px;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+}
 
 .project{
     background: black;
@@ -806,7 +928,7 @@ footer ul li a {
         font-size: 1.4rem;
         font-weight: 500;
         font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+        background: deeppink;
         background-clip: text;
         color: transparent;
     }
