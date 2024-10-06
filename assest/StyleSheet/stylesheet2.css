@@ -209,7 +209,7 @@ li>a:hover::before{
 }
 
 
-
+/*Service page*/
 .Service{
     background: black;
     padding-bottom: 70px;
@@ -246,7 +246,7 @@ li>a:hover::before{
 .grid_card{
     box-shadow: 0 0 30px #272727;
     width: 500px;
-    border: 2px solid #272727;
+    border: 5px solid #272727;
     background: black;
     color: white;
     border-radius: 3rem;
@@ -259,15 +259,19 @@ li>a:hover::before{
     transition: 0.2s ease-in-out;
 }
 
-.grid_card:hover{
-    transform: scale(1.02);
-    background: white;
-    color: black;
+.para{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-style: normal;
+    text-decoration: none;
 }
 
-.grid_card>div{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.title{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
 }
 
 .grid_card>span{
@@ -312,28 +316,28 @@ li>a:hover::before{
 }
 
 .about-img{
-    position: relative;
+    position: absolute;
     width: 40vw;
     height: 60vh;
     border-radius: 20px;
-    border: 2px solid white;
+    border: 3px solid white;
     overflow: hidden;
 }
 .about-img>section{
     display: flex;
     width: fit-content;
-    animation: animation-slide 3s infinite alternate;
+    animation: animation-slide 5s infinite alternate;
 }
 .about-img>section>div{
     width: 50vw;
     height: 50vh;
 }
-#1>img{
-    /*background: url("assest/images/Innovesta/7.jpg");*/
+.about-img>main>section>div:first-child{
+    background: url("assest/images/Innovesta/7.jpg");
     background-size: cover;
     background-position: center;
 }
-.about-img>section>div:nth-child(2){
+/*.about-img>section>div:nth-child(2){
     background: url("assest/images/2ndSecond.JPG");
     background-size: cover;
     background-position: center;
@@ -362,6 +366,22 @@ li>a:hover::before{
     background: url("assest/images/GrimTheater/4.jpg");
     background-size: cover;
     background-position: center;
+}*/
+
+@keyframes animation-slide {
+    0%,20%{
+        transform: translateX(0%);
+    }
+    /*5% ka delay ekk thiynw.animation delay kiyana property eken wenne animation eka start karann 5s parakku krnwa habei mathana wenne key frame athara delay ekk hadanawa*/
+    25%,45%{
+        transform: translateX(-25%);
+    }
+    50%,55%{
+        transform: translateX(-50%);
+    }
+    75%{
+        transform: translateX(-75%);
+    }
 }
 
 .about-text1{
