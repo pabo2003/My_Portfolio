@@ -37,6 +37,9 @@
     font-weight: bolder;
     color: white;
     transition: 0.3s ease-in-out;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 .HeaderName:hover{
     transform: scale(1.1);
@@ -304,7 +307,7 @@ li>a:hover::before{
 /*About Me section*/
 .About-me {
     color: white;
-    background:#1e1f20;;
+    background: black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -315,77 +318,12 @@ li>a:hover::before{
     padding-top: 50px;
 }
 
-.about-img{
-    position: absolute;
-    width: 40vw;
-    height: 60vh;
+.about-img img {
+    position: relative;
+    max-width: 650px;
+    height: auto;
+    width: 100%;
     border-radius: 20px;
-    border: 3px solid white;
-    overflow: hidden;
-}
-.about-img>section{
-    display: flex;
-    width: fit-content;
-    animation: animation-slide 5s infinite alternate;
-}
-.about-img>section>div{
-    width: 50vw;
-    height: 50vh;
-}
-.about-img>main>section>div:first-child{
-    background: url("assest/images/Innovesta/7.jpg");
-    background-size: cover;
-    background-position: center;
-}
-/*.about-img>section>div:nth-child(2){
-    background: url("assest/images/2ndSecond.JPG");
-    background-size: cover;
-    background-position: center;
-}
-.about-img>section>div:nth-child(3){
-    background: url("assest/images/KowulWasanthaya/dance1.JPG");
-    background-size: cover;
-    background-position: center;
-}
-.about-img>section>div:nth-child(4){
-    background: url("assest/images/Innovesta/1.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.about-img>section>div:nth-child(5){
-    background: url("assest/images/Innovesta/6.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.about-img>section>div:nth-child(6){
-    background: url("assest/images/GrimTheater/3.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.about-img>section>div:nth-child(7){
-    background: url("assest/images/GrimTheater/4.jpg");
-    background-size: cover;
-    background-position: center;
-}*/
-
-@keyframes animation-slide {
-    0%,20%{
-        transform: translateX(0%);
-    }
-    /*5% ka delay ekk thiynw.animation delay kiyana property eken wenne animation eka start karann 5s parakku krnwa habei mathana wenne key frame athara delay ekk hadanawa*/
-    25%,45%{
-        transform: translateX(-25%);
-    }
-    50%,55%{
-        transform: translateX(-50%);
-    }
-    75%{
-        transform: translateX(-75%);
-    }
-}
-
-.about-text1{
-    margin-top: 5vh;
 }
 
 .about-text1 h2 {
@@ -394,16 +332,33 @@ li>a:hover::before{
     top: -69px;
 }
 
-.about-text1 > h2 > span{
+.about-text1 > h2 > span {
     background: deeppink;
     background-clip: text;
     color: transparent;
 }
 
-.Ijse{
+.about-text1 > h4 > span {
+    background: deeppink;
+    background-clip: text;
+    color: transparent;
+    font-family: "Sofadi One", system-ui;
+
+}
+
+.about-text1 h4 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Sofadi One", system-ui;
+    position: relative;
+    top: -60px;
+}
+
+.Ijse {
     color: red;
     font-weight: 500;
 }
+
 .about-text1 p {
     font-size: 25px;
     font-family: "Sofadi One", system-ui;
@@ -484,6 +439,7 @@ li>a:hover::before{
     }
 }
 
+
 .project{
     background: black;
     color: white;
@@ -527,6 +483,8 @@ li>a:hover::before{
     width: 16vw;
     height: auto;
     border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
 }
 .project-card:hover .btn{
     box-shadow: 0 0 30px #272727;
@@ -556,7 +514,7 @@ li>a:hover::before{
 
 
 .tools-section {
-    background: #272727;
+    background: black;
     text-align: center;
     padding: 200px 20px;
     padding-bottom: 150px;
@@ -590,14 +548,16 @@ li>a:hover::before{
 }
 
 .tool-item {
-    color: white;
+    color: #b81d70;
     background-color: black;
+    border: 3px solid white;
     padding: 15px 25px;
     border-radius: 8px;
     /*
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.190), 0 0 8px rgba(255, 255, 255, 0.19);
     */
     font-size: 0.9em;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -606,10 +566,22 @@ li>a:hover::before{
 
 .tool-item:hover {
     transform: scale(1.1);
-
+    color: azure;
+    --color1: #ffc9f3;
+    --color2: #ff93e7;
+    --color3: #ca1f7b;
+    --color4: magenta;
+    --color5: #b81d70;
+    text-shadow:
+            0 0 10px var(--color1),
+            0 0 20px var(--color2),
+            0 0 40px var(--color3),
+            0 0 80px var(--color4),
+            0 0 100px var(--color4);;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.tool-item img {
+.tool-item>img {
     width: 23px;
     height: 23px;
     margin-bottom: 0;
