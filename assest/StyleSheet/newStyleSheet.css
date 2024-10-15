@@ -1,25 +1,20 @@
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins' , sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    list-style: none;
-    background: black;
+    /*background-color: black;*/
 }
-/*First Page*/
-.S1-HomePage{
-    min-height: 100vh;
-    padding: 10rem 12%;
-    width: 100%;
-    position: relative;
-}
-.S1-HomePage>header{
+/*header content*/
+header{
     position: fixed;
     top: 1rem;
     left: 50%;
+    width: 100%;
+    background: #272727;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -27,7 +22,7 @@
     gap: 5rem;
     color: white;
     padding: 0.5rem 1.5rem;
-    border: 2px solid white;
+    border: 5px solid #ca1f7b;
     border-radius: 3rem;
     z-index: 1000;
 }
@@ -56,17 +51,16 @@
             0 0 80px var(--color4),
             0 0 100px var(--color4);;
 }
-
 .nav_list{
     display: flex;
     gap: 2rem;
 }
-li>a{
+.nav_list>li>a{
     color: white;
     position: relative;
     font-weight: 400;
 }
-li>a::before{
+.nav_list>li>a::before{
     position: absolute;
     content: "";
     width: 0;
@@ -76,50 +70,48 @@ li>a::before{
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
     background: white;
-    color: #ED5278;
+
 }
 .nav_list>li>a:hover::before{
     width: 100%;
     color: #ca1f7b;
 }
 
-#menu-icon{
-    font-size: 2rem;
-    display: none;
-    /*color: black;*/
-}
-.about{
+/*Main Section*/
+/*Home content*/
+.home{
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
+    background: black;
 }
-.about .about-container{
+.home .aboutContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
-
-.about img{
+.myImg{
     border: 8px solid deeppink;
     width: 31vw;
     height: 30vw;
     border-radius: 50%;
+    position: relative;
+    top: 2rem;
     transition: 0.3s ease-in-out;
-    /*  overflow: hidden;
-      transition: 0.5s;*/
 }
-.about img:hover{
+.myImg:hover{
     transform: scale(1.2);
 }
-.info-box{
+.homeBox{
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     gap: 1.5rem;
 }
-#Hello-Word{
+#hello{
     font-size: 3.3rem;
     font-weight: 500;
     color: white;
@@ -143,7 +135,6 @@ li>a::before{
     font-weight: 500;
     font-style: normal;
 }
-
 .btn-group{
     display: flex;
     gap: 2rem;
@@ -210,10 +201,13 @@ li>a::before{
             0 0 100px var(--color4);
 }
 
-
-/*Service page*/
-.Service{
-    padding-bottom: 70px;
+/*Service content*/
+.service{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: black;
 }
 .section_title{
     text-align: center;
@@ -288,7 +282,6 @@ li>a::before{
     padding: 0.5rem 1.5rem;
     border: 1px solid white;
     color: white;
-    /*background: black;*/
     cursor: pointer;
     font-weight: 500;
     transition: 0.2s ease-in-out;
@@ -296,11 +289,11 @@ li>a::before{
     bottom: -15px;
 }
 
-
-/*About Me section*/
-.About-me {
+/*About content*/
+.about {
     color: white;
     display: grid;
+    background: black;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1.9rem;
@@ -359,87 +352,14 @@ li>a::before{
     margin-bottom: 4rem;
 }
 
-@media (max-width: 1200px) {
-    .About-me {
-        padding: 100px;
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-img img {
-        left: 0;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .about-text1 h2 {
-        font-size: 50px;
-        top: 0;
-    }
-
-    .about-text1 h4 {
-        font-size: 28px;
-        top: 0;
-    }
-
-    .about-text1 p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .About-me {
-        padding: 60px;
-    }
-
-    .about-text1 h2 {
-        font-size: 40px;
-    }
-
-    .about-text1 h4 {
-        font-size: 24px;
-    }
-
-    .about-text1 p {
-        font-size: 18px;
-    }
-
-    .about-img img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .About-me {
-        padding: 40px;
-    }
-
-    .about-text1 h2 {
-        font-size: 32px;
-    }
-
-    .about-text1 h4 {
-        font-size: 20px;
-    }
-
-    .about-text1 p {
-        font-size: 16px;
-    }
-
-    .about-img img {
-        width: 100%;
-    }
-}
-
-
-.project{
-    /*background: black;*/
+/*Projects content*/
+.projects{
+    background: black;
     color: white;
     padding: 20px;
 }
 
-.project > div{
+.projects > div{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 2rem;
@@ -476,7 +396,7 @@ li>a::before{
 }
 
 
-.project>h2{
+.projects>h2{
     font-weight: 600;
 }
 
@@ -485,15 +405,15 @@ li>a::before{
     font-weight: 500;
 }
 
-
-
-.tools-section {
+/*Tool form*/
+.tool {
+    background: black;
     text-align: center;
     padding: 200px 20px;
     padding-bottom: 150px;
 }
 
-.tools-section h2 {
+.tool>h2 {
     position: relative;
     top: -90px;
     color: white;
@@ -501,7 +421,7 @@ li>a::before{
     margin-bottom: 10px;
 }
 
-.tools-section p {
+.tool>p {
     position: relative;
     top: -60px;
     color: white;
@@ -522,12 +442,10 @@ li>a::before{
 
 .tool-item {
     color: #b81d70;
+    background: #272727;
     border: 3px solid white;
     padding: 15px 25px;
     border-radius: 8px;
-    /*
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.190), 0 0 8px rgba(255, 255, 255, 0.19);
-    */
     font-size: 0.9em;
     font-weight: bolder;
     display: flex;
@@ -559,94 +477,11 @@ li>a::before{
     margin-bottom: 0;
 }
 
-@media (max-width: 1200px) {
-    .tool-item {
-        padding: 15px 20px;
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 768px) {
-    .tools-section h2 {
-        font-size: 2em;
-    }
-
-    .tools-section p {
-        font-size: 1em;
-    }
-
-    .tool-item {
-        padding: 12px 18px;
-        font-size: 0.85em;
-    }
-}
-
-@media (max-width: 480px) {
-    .tools-section h2 {
-        font-size: 1.75em;
-    }
-
-    .tools-section p {
-        font-size: 0.9em;
-    }
-
-    .tool-item {
-        padding: 10px 15px;
-        font-size: 0.8em;
-    }
-}
-
-
-
-/*.contact .section_title{
-    font-weight: 300;
-}
-
-
-.contact{
-    background: black;
-}
-.input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 0;
-}
-
-.contact h2{
-    margin-top: 5rem;
-}
-
-.input-box input{
-    position: relative;
-    border-radius: 3rem;
-    border: 3px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
-}
-
-.input-box input::placeholder{
-    font-size: 3rem;
-}
-
-.input{
-    position: relative;
-}
-
-.input div{
-    position: absolute;
-    font-size: 4rem;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%,-50%);
-}*/
-
+/*Contact form*/
 .contact{
     position: relative;
     min-height: 100vh;
+    background: black;
     padding: 50px 100px;
     display: flex;
     justify-content: center;
@@ -663,7 +498,7 @@ li>a::before{
 .content>h1{
     font-size: 3em;
     color: white;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .content>p{
@@ -710,7 +545,7 @@ li>a::before{
     content: " ";
     position: absolute;
     inset: 2px;
-    /*background: black;*/
+    background: black;
 }
 .icon>b{
     position: absolute;
@@ -721,7 +556,6 @@ li>a::before{
 .icon>i{
     position: relative;
     z-index: 1000;
-    /*color: black;*/
     background: #ca1f7b;
     font-size: 1.25em;
 }
@@ -735,7 +569,7 @@ li>a::before{
     font-weight: 300;
 }
 .text1>h3{
-    font-weight: 500;
+    font-weight: 800;
     color: #ca1f7b;
 
 }
@@ -758,7 +592,7 @@ li>a::before{
 }
 .sci>li>a{
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: 0.25s;
 }
 .sci>li>a:hover{
@@ -801,8 +635,8 @@ li>a::before{
     width: 100%;
     margin-top: 20px;
 }
-.inputBox>input{
-    width: 100%;
+.inputBox>input,.inputBox>textarea{
+    width: 100% !important;
     padding: 5px 0;
     font-size: 1.1em;
     margin: 10px 0;
@@ -811,6 +645,50 @@ li>a::before{
     border-bottom: 2px solid #ca1f7b;
     color: white;
     outline: none;
+    resize: none;
+}
+.inputBox>span{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: white;
+    transition: 0.5s;
+}
+.inputBox>input:focus~span, .inputBox>textarea:focus~span,
+.inputBox>input:valid~span, .inputBox>textarea:valid~span{
+    color: #ca1f7b;
+    font-size: 0.9em;
+    transform: translateY(-24px);
+}
+.inputBox>input[type="submit"]{
+    width: 100%;
+    background: #ca1f7b;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    padding: 10px ;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+@media (max-width: 991px) {
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .contactInfo,.contactForm{
+        width: 100%;
+    }
+    .contactForm{
+        padding: 30px;
+    }
+    .contactForm>form{
+        padding: 30px;
+    }
 }
 @property --a {
     syntax: '<angle>';
@@ -827,40 +705,51 @@ li>a::before{
 }
 
 
-footer{
-    bottom: 0;
-    left: 0;
-    height: 10rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+
+
+
+
+
+@media (max-width: 1200px) {
+    .tool-item {
+        padding: 15px 20px;
+        font-size: 0.9em;
+    }
 }
 
-footer>ul{
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+@media (max-width: 768px) {
+    .tools-section h2 {
+        font-size: 2em;
+    }
+
+    .tools-section p {
+        font-size: 1em;
+    }
+
+    .tool-item {
+        padding: 12px 18px;
+        font-size: 0.85em;
+    }
 }
 
-footer ul li a {
-    color: white;
-    font-weight: 400;
+@media (max-width: 480px) {
+    .tools-section h2 {
+        font-size: 1.75em;
+    }
+
+    .tools-section p {
+        font-size: 0.9em;
+    }
+
+    .tool-item {
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
 }
-
-.copyright{
-    font-size: 16px;
-    margin-top: 2rem;
-    color: white;
-}
-
-
 
 @media(max-width: 1200px){
 
-    .Service{
+    .service{
         position: relative;
         top: -100px;
     }
@@ -868,7 +757,7 @@ footer ul li a {
         padding: 1rem 2rem;
         gap: 2rem;
     }
-    .about .about-container{
+    .home .about-container{
         gap: 3rem;
     }
     .Service_info{
@@ -885,7 +774,7 @@ footer ul li a {
     .input div{
         font-size: 2.5rem;
     }
-    .project{
+    .projects{
         margin-top: -100px;
     }
 }
@@ -897,12 +786,6 @@ footer ul li a {
     }
     header div{
         font-size: 1rem;
-    }
-    .about-container{
-        flex-direction: column;
-    }
-    header .Visit_gitHub{
-        display: none;
     }
     .input-box input{
         padding: 1rem 2rem;
@@ -917,26 +800,89 @@ footer ul li a {
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
-
-    .Service_image{
-        width: 70vw;
-    }
-
-
 }
 
+@media (max-width: 1200px) {
+    .about {
+        padding: 100px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img img {
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-text1 h2 {
+        font-size: 50px;
+        top: 0;
+    }
+
+    .about-text1 h4 {
+        font-size: 28px;
+        top: 0;
+    }
+
+    .about-text1 p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px;
+    }
+
+    .about-text1 h2 {
+        font-size: 40px;
+    }
+
+    .about-text1 h4 {
+        font-size: 24px;
+    }
+
+    .about-text1 p {
+        font-size: 18px;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 40px;
+    }
+
+    .about-text1 h2 {
+        font-size: 32px;
+    }
+
+    .about-text1 h4 {
+        font-size: 20px;
+    }
+
+    .about-text1 p {
+        font-size: 16px;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+}
 
 @media all and (max-width: 704px){
-    .project > div{
+    .projects > div{
         grid-template-columns: 1fr;
     }
 
 }
-@media all and (max-width: 600px){
 
-    header>#menu-icon{
-        display:block;
-    }
+@media all and (max-width: 600px){
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
@@ -970,7 +916,7 @@ footer ul li a {
     header .HeaderName{
         font-size: 1.5rem;
     }
-    .about img{
+    .home img{
         width: 100%;
         height: auto;
     }
@@ -991,12 +937,7 @@ footer ul li a {
 
 }
 
-
 @media all and (max-width: 680px) {
-    header>#menu-icon{
-        display:block;
-    }
-
     .nav_list{
         position: absolute;
         top: 100%;
@@ -1028,7 +969,7 @@ footer ul li a {
     header .HeaderName{
         font-size: 1.5rem;
     }
-    .about img{
+    .home>img{
         width: 100%;
         height: auto;
     }
@@ -1057,7 +998,7 @@ footer ul li a {
     .btn{
         font-size: 12px;
     }
-    .about img{
+    .home>img{
         width: 90%;
         height: auto;
     }
@@ -1087,7 +1028,7 @@ footer ul li a {
         width: 100%;
     }
 
-    .project > div{
+    .projects > div{
         grid-template-columns: 1fr;
         padding-left: 1rem;
     }
@@ -1106,7 +1047,7 @@ footer ul li a {
 }
 
 @media all and (max-width: 375px) {
-    .project > div{
+    .projects > div{
         padding-left: 0;
     }
     .project-card {
@@ -1121,7 +1062,7 @@ footer ul li a {
 }
 
 @media all and (max-width: 320px) {
-    .project > div{
+    .projects > div{
         padding-left: 0;
     }
     .project-card {
@@ -1135,5 +1076,105 @@ footer ul li a {
     }
 }
 
-@media all and (max-width: 1440px) {
+@media all and (max-width: 600px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .nav_list{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(255,255,255,0.6);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .nav_list li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav_list.active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+    header .HeaderName{
+        font-size: 1.5rem;
+    }
+    .home>img{
+        width: 100%;
+        height: auto;
+    }
+    .input-box input{
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    footer ul{
+        gap: 1rem;
+    }
+    .section_title{
+        font-size: 30px;
+    }
+
+}
+
+@media all and (max-width: 680px) {
+    .nav_list{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        margin-left: -160px;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.90);
+        backdrop-filter: blur(10px);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .nav_list>li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav_list:active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+    header .HeaderName{
+        font-size: 1.5rem;
+    }
+    .home>img{
+        width: 100%;
+        height: auto;
+    }
+    .input-box input{
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    footer ul{
+        gap: 1rem;
+    }
 }
