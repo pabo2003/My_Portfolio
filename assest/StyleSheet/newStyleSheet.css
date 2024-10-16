@@ -76,6 +76,61 @@ header{
     width: 100%;
     color: #ca1f7b;
 }
+.togglBtn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/*dropdown menu*/
+.dropdownMenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(225,225,225,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.dropdownMenu.open{
+    height: 300px;
+}
+.dropdownMenu>li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdownMenu>li>a{
+    color: white;
+}
+.dropdownMenu>li>a:hover{
+    color: #ca1f7b;
+    font-weight: bold;
+}
+@media (max-width: 991px) {
+    .nav_list>li , .menu>li{
+        display: none;
+    }
+    .togglBtn{
+        display: block;
+    }
+
+    .dropdownMenu{
+        display: block;
+    }
+}
+@media (max-width: 576px) {
+    .dropdownMenu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
 
 /*Main Section*/
 /*Home content*/
@@ -673,6 +728,76 @@ header{
     font-size: 1.2em;
     font-weight: 500;
 }
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate {
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    background: #ca1f7b;
+    min-height: 100px;
+    padding: 20px 50px;
+    flex-direction: column;
+}
+.soIcon,.menu{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+.soIcon>li,.menu>li{
+    list-style: none;
+}
+.soIcon>li>a,.menu>li>a{
+    color: #333333;
+    font-size: 2.5rem;
+    display: inline-block;
+    transition: 0.5s;
+}
+.soIcon>li>a:hover,.menu>li>a:hover{
+    color: #272727;
+    transform: translateY(-10px);
+    filter: drop-shadow(0 0 5px #ca1f7b);
+}
+.menu>li>a{
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    opacity: 0.75;
+}
+.menu>li>a:hover{
+    opacity: 1;
+}
+footer>p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-size: 1000px 100px;
+}
+
 @media (max-width: 991px) {
     .contact{
         padding: 50px;
@@ -690,25 +815,6 @@ header{
         padding: 30px;
     }
 }
-@property --a {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-}
-@keyframes animate {
-    0%{
-        --a: 0deg;
-    }
-    100%{
-        --a: 360deg;
-    }
-}
-
-
-
-
-
-
 
 @media (max-width: 1200px) {
     .tool-item {
@@ -718,11 +824,11 @@ header{
 }
 
 @media (max-width: 768px) {
-    .tools-section h2 {
+    .tool>h2 {
         font-size: 2em;
     }
 
-    .tools-section p {
+    .tool>p {
         font-size: 1em;
     }
 
@@ -733,11 +839,11 @@ header{
 }
 
 @media (max-width: 480px) {
-    .tools-section h2 {
+    .tool>h2 {
         font-size: 1.75em;
     }
 
-    .tools-section p {
+    .tool>p {
         font-size: 0.9em;
     }
 
@@ -757,22 +863,11 @@ header{
         padding: 1rem 2rem;
         gap: 2rem;
     }
-    .home .about-container{
+    .aboutContainer{
         gap: 3rem;
     }
     .Service_info{
         flex-direction: column;
-    }
-
-    .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-    .input div{
-        font-size: 2.5rem;
     }
     .projects{
         margin-top: -100px;
@@ -784,18 +879,8 @@ header{
         gap: 1rem;
         padding: 1rem 1rem;
     }
-    header div{
+    header>div{
         font-size: 1rem;
-    }
-    .input-box input{
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-    .input div{
-        display: none;
     }
     .grid{
         grid-template-columns: repeat(1,1fr);
@@ -803,74 +888,74 @@ header{
 }
 
 @media (max-width: 1200px) {
-    .about {
+    .home {
         padding: 100px;
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .about-img img {
+    .about-img>img {
         left: 0;
         width: 80%;
         margin: 0 auto;
     }
 
-    .about-text1 h2 {
+    .about-text1>h2 {
         font-size: 50px;
         top: 0;
     }
 
-    .about-text1 h4 {
+    .about-text1>h4 {
         font-size: 28px;
         top: 0;
     }
 
-    .about-text1 p {
+    .about-text1>p {
         font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .about {
+    .home {
         padding: 60px;
     }
 
-    .about-text1 h2 {
+    .about-text1>h2 {
         font-size: 40px;
     }
 
-    .about-text1 h4 {
+    .about-text1>h4 {
         font-size: 24px;
     }
 
-    .about-text1 p {
+    .about-text1>p {
         font-size: 18px;
     }
 
-    .about-img img {
+    .about-img>img {
         width: 100%;
         height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .about {
+    .home {
         padding: 40px;
     }
 
-    .about-text1 h2 {
+    .about-text1>h2 {
         font-size: 32px;
     }
 
-    .about-text1 h4 {
+    .about-text1>h4 {
         font-size: 20px;
     }
 
-    .about-text1 p {
+    .about-text1>p {
         font-size: 16px;
     }
 
-    .about-img img {
+    .about-img>img {
         width: 100%;
     }
 }
@@ -886,47 +971,16 @@ header{
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
-
-    .nav_list{
-        position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(255,255,255,0.6);
-        border-radius: 3rem;
-        display: none;
-    }
-
-    .nav_list li{
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-    .nav_list.active{
-        display: block;
-    }
     header{
         padding: 1rem 5rem;
         gap: 8rem;
     }
-    header .HeaderName{
+    .HeaderName{
         font-size: 1.5rem;
     }
-    .home img{
+   .home>img{
         width: 100%;
         height: auto;
-    }
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
     }
     footer ul{
         gap: 1rem;
@@ -938,30 +992,6 @@ header{
 }
 
 @media all and (max-width: 680px) {
-    .nav_list{
-        position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        margin-left: -160px;
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        color: white;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.90);
-        backdrop-filter: blur(10px);
-        border-radius: 3rem;
-        display: none;
-    }
-
-    .nav_list li{
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-    .nav_list.active{
-        display: block;
-    }
     header{
         padding: 1rem 5rem;
         gap: 8rem;
@@ -973,14 +1003,6 @@ header{
         width: 100%;
         height: auto;
     }
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
     footer ul{
         gap: 1rem;
     }
@@ -988,7 +1010,7 @@ header{
 
 @media all and (max-width: 425px) {
 
-    .social i{
+    .social>i{
         font-size: 2.2rem;
     }
     .button{
@@ -998,11 +1020,11 @@ header{
     .btn{
         font-size: 12px;
     }
-    .home>img{
+    .myImg{
         width: 90%;
         height: auto;
     }
-    .text>#Hello-Word{
+    .text>#hello{
         font-size: 2.1rem;
         font-weight: 500;
         color: white;
@@ -1035,15 +1057,7 @@ header{
     .project-card {
         padding: 1rem;
         width: 100%;
-    } .input-box input{
-          padding: 0.5rem 3rem;
-          width: 80%;
-          font-size: 1.3rem;
-      }
-    .input-box input::placeholder{
-        font-size: 1.3rem;
     }
-
 }
 
 @media all and (max-width: 375px) {
@@ -1080,29 +1094,6 @@ header{
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
-
-    .nav_list{
-        position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(255,255,255,0.6);
-        border-radius: 3rem;
-        display: none;
-    }
-
-    .nav_list li{
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-    .nav_list.active{
-        display: block;
-    }
     header{
         padding: 1rem 5rem;
         gap: 8rem;
@@ -1110,17 +1101,9 @@ header{
     header .HeaderName{
         font-size: 1.5rem;
     }
-    .home>img{
+    .myImg{
         width: 100%;
         height: auto;
-    }
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
     }
     footer ul{
         gap: 1rem;
@@ -1132,49 +1115,30 @@ header{
 }
 
 @media all and (max-width: 680px) {
-    .nav_list{
-        position: absolute;
-        top: 100%;
-        margin-top: 1rem;
-        margin-left: -160px;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        flex-direction: column;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.90);
-        backdrop-filter: blur(10px);
-        border-radius: 3rem;
-        display: none;
-    }
-
-    .nav_list>li{
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-    .nav_list:active{
-        display: block;
-    }
-    header{
+    header {
         padding: 1rem 5rem;
         gap: 8rem;
     }
-    header .HeaderName{
+
+    .HeaderName {
         font-size: 1.5rem;
     }
-    .home>img{
+
+    .myImg {
         width: 100%;
         height: auto;
     }
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-    footer ul{
+    footer ul {
         gap: 1rem;
+    }
+}
+@media (max-width: 991px) {
+    .myImg{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .tool>h2{
+        font-size: 2.5rem;
     }
 }
