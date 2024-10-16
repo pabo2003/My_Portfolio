@@ -7,10 +7,11 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+
 }
 /*First Page*/
 .S1-HomePage{
-    min-height: 100vh;
+    min-height: 6vh;
     padding: 10rem 12%;
     width: 100%;
     position: relative;
@@ -417,9 +418,10 @@
         text-align: center;
     }
 
-    .about-img img {
+    .about-img>img {
         left: 0;
         width: 80%;
+        height: 70vh;
         margin: 0 auto;
     }
 
@@ -441,6 +443,7 @@
 @media (max-width: 768px) {
     .About-me {
         padding: 60px;
+
     }
 
     .about-text1 h2 {
@@ -650,7 +653,7 @@
 
 .contact{
     position: relative;
-    min-height: 100vh;
+    min-height: 6vh;
     background: black;
     padding: 50px 100px;
     display: flex;
@@ -977,7 +980,20 @@ footer .wave{
 
 
 }
-
+@media all and (max-width: 1032px) {
+    .S1-HomePage {
+        min-height: 6vh;
+        padding: 10rem 12%;
+        width: 100%;
+        position: relative;
+        background: black;
+    }
+}
+@media all and (max-width: 786px){
+    .project{
+        padding: 60px;
+    }
+}
 
 @media all and (max-width: 704px){
     .project > div{
@@ -1079,6 +1095,9 @@ footer .wave{
 }
 
 @media all and (max-width: 375px) {
+    .project{
+        padding-top: 100px;
+    }
     .project > div{
         padding-left: 0;
     }
