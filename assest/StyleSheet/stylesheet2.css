@@ -825,7 +825,7 @@
 }
 .icon>i{
     position: relative;
-    z-index: 1000;
+    z-index: 900;
     background: #ca1f7b;
     font-size: 1.25em;
 }
