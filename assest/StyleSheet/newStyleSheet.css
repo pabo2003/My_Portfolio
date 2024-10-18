@@ -460,6 +460,20 @@ header{
     font-weight: 500;
 }
 
+/*assignment section*/
+.assignment{
+    background: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+
+}
+
 /*Tool form*/
 .tool {
     background: black;
