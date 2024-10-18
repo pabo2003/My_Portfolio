@@ -485,8 +485,11 @@
         width: 100%;
     }
 }
-
-
+/*Gallery Section*/
+.item{
+    background-image: url("assest/images");
+}
+/*Project Section*/
 .project{
     background: black;
     color: white;
