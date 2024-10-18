@@ -486,7 +486,33 @@
     }
 }
 /*Gallery Section*/
-
+#item1{
+    background-image: url("assest/images/GrimTheater/1.jpg");
+}
+#item2{
+    background-image: url("assest/images/GrimTheater/2.jpg");
+}
+#item3{
+    background-image: url("assest/images/GrimTheater/3.jpg");
+}
+#item4{
+    background-image: url("assest/images/Innovesta/1.jpg");
+}
+#item5{
+    background-image: url("assest/images/GrimTheater/2.jpg");
+}
+#item6{
+    background-image: url("assest/images/GrimTheater/3.jpg");
+}
+#item1{
+    background-image: url("assest/images/GrimTheater/1.jpg");
+}
+#item1{
+    background-image: url("assest/images/GrimTheater/1.jpg");
+}
+#item1{
+    background-image: url("assest/images/GrimTheater/1.jpg");
+}
 /*Project Section*/
 .project{
     background: black;
