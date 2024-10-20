@@ -1504,9 +1504,12 @@ footer .wave{
     footer {
         padding: 20px 50px; /* Maintain padding */
     }
+
     .soIcon > li > a, .menu > li > a {
         font-size: 2.5rem; /* Maintain icon size */
     }
+
     .menu > li > a {
         font-size: 1rem; /* Maintain menu font size */
     }
+}
