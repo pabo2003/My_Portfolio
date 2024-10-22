@@ -338,6 +338,13 @@
         flex-direction: column;
         gap: 5rem;
     }
+    .about-container{
+        padding-top: 8rem;
+    }
+    .about img{
+        width: 45vw;
+        height: 40vw;
+    }
 }
 
 /*Mobile Type Devices*/
@@ -503,7 +510,7 @@
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid_card{
+    .grid .grid_card{
         width: 45vw;
     }
 }
@@ -540,7 +547,7 @@
 .about-img>img {
     position: relative;
     max-width: 650px;
-    height: 90vh;
+    height: 50vh;
     width: 100%;
 
     border-radius: 100%;
@@ -633,6 +640,10 @@
     .about-text1 h4 {
         font-size: 24px; /* Adjusted font size */
     }
+    .about-img>img {
+        height: 30vh;
+        padding-bottom: 3rem;
+    }
 }
 
 /*Tab Type Devices*/
@@ -682,6 +693,15 @@
     font-weight: bold;
     margin-bottom: 2em;
     color: white;
+}
+
+.Gallery .GalP{
+    color: #ca1f7b;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-size: 30px;
+    font-style: normal;
 }
 
 .Gallery section {
@@ -1093,6 +1113,25 @@
 @media all and (max-width: 787px){
     .project{
         padding-bottom: 250px;
+    }
+}
+@media all and (max-width: 1023px){
+    .assignment .info>h1{
+        font-size: 20px;
+    }
+    .assignment .info>p{
+        font-size: 12px;
+        padding: 2px;
+    }
+    .assignment .btn-group{
+        font-size: 10px;
+        gap: 10px;
+    }
+    .assignment .social{
+        margin-top: 10px;
+    }
+    .assignment .wrapper .card{
+        padding-bottom: 1rem;
     }
 }
 
