@@ -307,9 +307,9 @@
     .HeaderName {
         font-size: 2rem;
     }
-    .about img {
-        width: 20vh;
-        height: 20vh;
+    .about .about-container>img{
+        width: 80vw;
+        height: 25vh;
         margin-top: 70px;
     }
     .nav_list>li , .menu>li{
