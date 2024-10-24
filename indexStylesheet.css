@@ -21,7 +21,7 @@
     position: fixed;
     top: 1rem;
     left: 50%;
-    width: 100%;
+    width: 80%;
     background: #272727;
     transform: translateX(-50%);
     display: flex;
@@ -29,7 +29,7 @@
     justify-content: center;
     gap: 5rem;
     color: white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.5rem;
     border: 5px solid #ca1f7b;
     border-radius: 3rem;
     z-index: 1000;
@@ -306,6 +306,9 @@
     }
     .HeaderName {
         font-size: 2rem;
+    }
+    .header{
+        width: 50% !important;
     }
     .about .about-container>img{
         width: 80vw;
@@ -1252,7 +1255,7 @@
         padding: 180px 20px; /* Adjusted padding */
     }
     .tools-section h2 {
-        font-size: 3em; /* Adjusted font size */
+        font-size: 2.5em; /* Adjusted font size */
         top: -70px; /* Adjust position */
     }
     .tools-section p {
