@@ -279,6 +279,9 @@
     .HeaderName {
         font-size: 1.8rem;
     }
+    .About-me{
+        margin: 0;
+    }
     .nav_list {
         gap: 1.5rem;
     }
