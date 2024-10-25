@@ -550,7 +550,7 @@
 .about-img>img {
     position: relative;
     max-width: 650px;
-    height: 50vh;
+    height: 70vh;
     width: 100%;
 
     border-radius: 100%;
@@ -670,6 +670,9 @@
 @media all and (max-width: 1024px){
     .About-me {
         padding: 50px; /* Keep padding for larger screens */
+    }
+    .about-img>img {
+        width: ;
     }
     .about-text1 h2 {
         font-size: 60px; /* Adjusted font size */
