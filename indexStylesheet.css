@@ -671,9 +671,9 @@
     .About-me {
         padding: 50px; /* Keep padding for larger screens */
     }
-    .about-img>img {
+    /*.about-img>img {
         width: ;
-    }
+    }*/
     .about-text1 h2 {
         font-size: 60px; /* Adjusted font size */
     }
