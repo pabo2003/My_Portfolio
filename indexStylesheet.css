@@ -605,6 +605,7 @@
 /*Mobile Type Devices*/
 @media all and (max-width: 320px){
     .About-me {
+        margin-top: 0;
         grid-template-columns: 1fr; /* Single column layout */
         padding: 20px; /* Reduced padding */
     }
@@ -625,6 +626,7 @@
 }
 @media all and (max-width: 375px){
     .About-me {
+        margin-top: 0;
         grid-template-columns: 1fr; /* Single column layout */
         padding: 20px; /* Reduced padding */
     }
@@ -640,6 +642,7 @@
 }
 @media all and (max-width: 425px){
     .About-me {
+        margin-top: 0;
         grid-template-columns: 1fr; /* Single column layout */
         padding: 30px; /* Slightly more padding */
     }
