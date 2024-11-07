@@ -134,8 +134,8 @@
 
 .about img{
     border: 8px solid deeppink;
-    width: 50vw;
-    height: 50vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     /*  overflow: hidden;
@@ -556,7 +556,7 @@
 .about-img>img {
     position: relative;
     max-width: 650px;
-    height: 70vh;
+    height: 100%;
     width: 100%;
 
     border-radius: 100%;
@@ -621,7 +621,7 @@
         font-size: 16px; /* Smaller font size */
     }
     .about-img > img {
-        height: auto; /* Maintain aspect ratio */
+        height: 100%; /* Maintain aspect ratio */
     }
 }
 @media all and (max-width: 375px){
@@ -653,7 +653,7 @@
         font-size: 24px; /* Adjusted font size */
     }
     .about-img>img {
-        height: 30vh;
+        height: 100%;
         padding-bottom: 3rem;
     }
 }
