@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    list-style: none;
+    /*list-style: none;*/
 }
 
 /*First Page*/
@@ -405,7 +405,7 @@
     gap: 2rem;
 }
 
-.grid_card{
+.Service  .grid_card{
     box-shadow: 0 0 30px #272727;
     width: 500px;
     border: 5px solid #272727;
