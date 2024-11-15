@@ -374,180 +374,96 @@
 /*Service page*/
 .Service{
     background: black;
-    padding-bottom: 70px;
-}
-.section_title{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
     color: white;
-}
-.Service_info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
-.Service_image{
-    width: 35vw;
-    border-radius: 3rem;
-    box-shadow: 5px 7px 25px #272727;
-    transition: 0.3s ease-in-out;
-}
-.Service_image:hover{
-    transform: scale(1.1);
-}
-.grid{
+    height: 100vh;
+    width: 100%;
     display: grid;
-    grid-template-columns:repeat(2,1fr);
-    gap: 2rem;
+    place-items: center;
 }
-
-.Service  .grid_card{
-    box-shadow: 0 0 30px #272727;
-    width: 500px;
-    border: 5px solid #272727;
-
-    color: white;
-    border-radius: 3rem;
-    padding: 2rem;
+.rowS>h2{
+    font-size: 70px;
+}
+.rowS{
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: left;
+    flex-wrap: wrap;
+}
+.columnS{
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+.cardS{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#000000 50%,#ca1f7b 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ca1f7b;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s;
 }
 
-.para{
-    font-family: "Edu AU VIC WA NT Guides", cursive;
-    font-optical-sizing: auto;
-    font-size: 25px;
-    font-style: normal;
-    text-decoration: none;
+.Service h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 1em 0;
 }
-
-.title{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: bolder;
-    font-style: normal;
+.Service p{
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
 }
-
-.grid_card>span{
-    font-size: 1.8rem;
-    font-weight: 500;
-    background: deeppink;
-    background-clip: text;
-    color: transparent;
+.iconS{
+    background-color: black;
+    position: relative;margin: auto;
+    font-size: 30px;
+    border: 5px solid deeppink;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    display: grid;place-items: center;
+    transition: 0.5s;
 }
-
-.button{
-    border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid white;
-    color: white;
-    /*background: black;*/
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.2s ease-in-out;
-    position: relative;
-    bottom: -15px;
+.cardS:hover{
+    background-position: 0 100%;
 }
-
+.cardS:hover .iconS{
+    background-color: deeppink;
+    border: 5px solid black;
+}
+@media all and (min-width: 768px) {
+    .Service{
+        padding: 0 2em;
+    }
+    .columnS{
+        flex: 0 50%;
+        max-width: 50%;
+    }
+}
+@media all and (max-width: 992px){
+    .Service{
+        padding: 1em 3em;
+    }
+    .columnS{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
 /*Mobile Type Devices*/
-@media all and (max-width: 320px) {
-    .section_title {
-        font-size: 2rem;
-    }
-    .Service_info {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .Service_image {
-        width: 80vw;
-    }
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid_card {
-        width: 90vw;
-        padding: 1rem;
-    }
-    .para {
-        font-size: 18px;
-    }
+@media all and (max-width: 320px){
 }
-
-@media all and (max-width: 375px) {
-    .section_title {
-        font-size: 2.5rem;
-    }
-    .Service_info {
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .Service_image {
-        width: 70vw;
-    }
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid_card {
-        width: 90vw;
-    }
+@media all and (max-width: 375px){
 }
-
-
 @media all and (max-width: 425px) {
-    .section_title {
-        font-size: 3rem;
-    }
-    .Service_info {
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid_card {
-        width: 90vw;
-    }
 }
 
 /*Tab Type Devices*/
 @media all and (max-width: 768px){
-    .section_title {
-        font-size: 3.5rem;
-    }
-    .Service_info {
-        flex-direction: column;
-        gap: 4rem;
-    }
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .grid .grid_card{
-        width: 45vw;
-    }
 }
 
-
-@media all and (max-width: 1024px){
-    .grid_card {
-        width: 400px;
-    }
-}
-@media all and (max-width: 1440px){
-    .grid_card {
-        width: 450px;
-    }
-    .Service_image {
-        width: 30vw;
-    }
-}
 
 /*About Me section*/
 .About-me {
