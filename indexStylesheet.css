@@ -454,14 +454,152 @@
 }
 /*Mobile Type Devices*/
 @media all and (max-width: 320px){
+    .Service {
+        padding: 10px;
+    }
+
+    .rowS {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .columnS {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cardS {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .iconS {
+        font-size: 24px;
+    }
 }
 @media all and (max-width: 375px){
+    .Service {
+        padding: 15px;
+    }
+
+    .rowS {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .columnS {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cardS {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .iconS {
+        font-size: 26px;
+    }
 }
 @media all and (max-width: 425px) {
+    .Service {
+        padding: 20px;
+    }
+
+    .rowS {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .columnS {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .cardS {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .iconS {
+        font-size: 28px;
+    }
 }
 
 /*Tab Type Devices*/
 @media all and (max-width: 768px){
+    .Service {
+        padding: 30px;
+    }
+
+    .rowS {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .columnS {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .cardS {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .iconS {
+        font-size: 32px;
+    }
 }
 
 
