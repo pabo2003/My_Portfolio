@@ -337,8 +337,28 @@
     .S1-HomePage {
         padding: 6rem 5%;
     }
-    .nav_list {
-        gap: 1.5rem;
+    .nav_list , .menu>li {
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        margin-left: -160px;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.90);
+        backdrop-filter: blur(10px);
+        border-radius: 3rem;
+        display: none;
+    }
+    .togglBtn{
+        display: block;
+    }
+    .dropdownMenu{
+        display: block;
+        left: 2rem;
+        width: unset;
     }
     .about .about-container {
         flex-direction: column;
@@ -375,10 +395,13 @@
 .Service{
     background: black;
     color: white;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: grid;
     place-items: center;
+}
+h2{
+    margin-bottom: 30px;
 }
 .rowS>h2{
     font-size: 70px;
@@ -424,7 +447,8 @@
     height: 2.5em;
     width: 2.5em;
     border-radius: 50%;
-    display: grid;place-items: center;
+    display: grid;
+    place-items: center;
     transition: 0.5s;
 }
 .cardS:hover{
@@ -452,7 +476,7 @@
         max-width: 33.33%;
     }
 }
-/*Mobile Type Devices*/
+/*!*Mobile Type Devices*!
 @media all and (max-width: 320px){
     .Service {
         padding: 10px;
@@ -563,7 +587,7 @@
     }
 }
 
-/*Tab Type Devices*/
+!*Tab Type Devices*!
 @media all and (max-width: 768px){
     .Service {
         padding: 30px;
@@ -600,7 +624,7 @@
     .iconS {
         font-size: 32px;
     }
-}
+}*/
 
 
 /*About Me section*/
@@ -725,6 +749,8 @@
 /*Tab Type Devices*/
 @media all and (max-width: 768px){
     .About-me {
+        margin-top: 0;
+        gap: 3.9rem;
         grid-template-columns: 1fr; /* Single column layout */
         padding: 40px; /* Reduced padding */
     }
@@ -916,6 +942,8 @@
 
 
 .project>h2{
+    font-size: 50px;
+    margin-bottom: 10px;
     font-weight: 600;
 }
 
