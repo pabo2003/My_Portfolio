@@ -6,6 +6,7 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    /*overflow-y: hidden;*/
     /*list-style: none;*/
 }
 
@@ -244,6 +245,9 @@
 
 /*Mobile Type Devices*/
 @media all and (max-width: 320px){
+    h1{
+        font-size: 2.5em;
+    }
     .S1-HomePage {
         padding: 5rem 5%;
     }
@@ -276,6 +280,9 @@
     .S1-HomePage {
         padding: 7rem 8%;
     }
+    .S1-HomePage>header{
+       width: 100%;
+    }
     .HeaderName {
         font-size: 1.8rem;
     }
@@ -302,6 +309,9 @@
         left: 2rem;
         width: unset;
     }
+    .social{
+        gap: 2rem;
+    }
 }
 @media all and (max-width: 425px){
     .S1-HomePage {
@@ -311,7 +321,7 @@
         font-size: 2rem;
     }
     .header{
-        width: 50% !important;
+        width: 99%;
     }
     .about .about-container>img{
         width: 70vw;
@@ -336,6 +346,10 @@
 @media all and (max-width: 768px){
     .S1-HomePage {
         padding: 6rem 5%;
+    }
+    .S1-HomePage>header{
+        left: 37%;
+        width: 73%;
     }
     .nav_list , .menu>li {
         position: absolute;
@@ -458,6 +472,11 @@ h2{
     background-color: deeppink;
     border: 5px solid black;
 }
+@media all and (min-width: 320px){
+    .rowS>h2{
+        font-size: 2.5em;
+    }
+}
 @media all and (min-width: 768px) {
     .Service{
         padding: 0 2em;
@@ -476,118 +495,99 @@ h2{
         max-width: 33.33%;
     }
 }
-/*!*Mobile Type Devices*!
+/*Mobile Type Devices*/
 @media all and (max-width: 320px){
-    .Service {
-        padding: 10px;
-    }
-
     .rowS {
-        display: block;
-        margin-bottom: 20px;
+        flex-direction: column;
     }
 
     .columnS {
         width: 100%;
-        margin-bottom: 20px;
+        padding: 0.5em 0.8em;
     }
 
     .cardS {
-        padding: 15px;
+        padding: 1em 0.8em;
     }
 
-    h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    h4 {
+    .Service h4 {
         font-size: 16px;
     }
 
-    p {
-        font-size: 12px;
+    .Service p {
+        font-size: 13px;
+        line-height: 1.4;
     }
 
     .iconS {
-        font-size: 24px;
+        font-size: 20px;
+        height: 1.8em;
+        width: 1.8em;
     }
 }
 @media all and (max-width: 375px){
-    .Service {
-        padding: 15px;
-    }
-
     .rowS {
-        display: block;
-        margin-bottom: 20px;
+        flex-direction: column;
     }
 
     .columnS {
         width: 100%;
-        margin-bottom: 20px;
+        padding: 0.5em 1em;
     }
 
     .cardS {
-        padding: 20px;
+        padding: 1.5em 1em;
     }
 
-    h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    h4 {
+    .Service h4 {
         font-size: 18px;
     }
 
-    p {
+    .Service p {
         font-size: 14px;
     }
 
     .iconS {
-        font-size: 26px;
+        font-size: 25px;
+        height: 2em;
+        width: 2em;
     }
 }
 @media all and (max-width: 425px) {
-    .Service {
-        padding: 20px;
-    }
-
     .rowS {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     .columnS {
-        width: 48%;
-        margin-bottom: 20px;
+        width: 100%;
+        padding: 0.5em 1em;
     }
 
     .cardS {
-        padding: 25px;
+        padding: 1.5em 1em;
+        width: 50vw;
+        position: relative;
+        left: -15vw;
     }
 
-    h2 {
-        font-size: 22px;
-        text-align: center;
+    .Service h4 {
+        font-size: 19px;
     }
 
-    h4 {
-        font-size: 20px;
-    }
-
-    p {
+    .Service p {
         font-size: 14px;
+        line-height: 1.5;
     }
 
     .iconS {
         font-size: 28px;
+        height: 2.2em;
+        width: 2.2em;
     }
 }
 
-!*Tab Type Devices*!
+/*!*Tab Type Devices*!*/
 @media all and (max-width: 768px){
     .Service {
         padding: 30px;
@@ -624,7 +624,7 @@ h2{
     .iconS {
         font-size: 32px;
     }
-}*/
+}
 
 
 /*About Me section*/
@@ -694,51 +694,51 @@ h2{
 @media all and (max-width: 320px){
     .About-me {
         margin-top: 0;
-        grid-template-columns: 1fr; /* Single column layout */
-        padding: 20px; /* Reduced padding */
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
     .about-text1 h2 {
-        font-size: 30px; /* Smaller font size */
-        top: 0; /* Reset position */
+        font-size: 2.5em;
+        top: 0;
     }
     .about-text1 h4 {
-        font-size: 20px; /* Smaller font size */
-        top: 0; /* Reset position */
+        font-size: 20px;
+        top: 0;
     }
     .about-text1 p {
-        font-size: 16px; /* Smaller font size */
+        font-size: 16px;
     }
     .about-img > img {
-        height: 100%; /* Maintain aspect ratio */
+        height: 100%;
     }
 }
 @media all and (max-width: 375px){
     .About-me {
         margin-top: 0;
-        grid-template-columns: 1fr; /* Single column layout */
-        padding: 20px; /* Reduced padding */
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
     .about-text1 h2 {
-        font-size: 35px; /* Adjusted font size */
+        font-size: 35px;
     }
     .about-text1 h4 {
-        font-size: 22px; /* Adjusted font size */
+        font-size: 22px;
     }
     .about-text1 p {
-        font-size: 18px; /* Adjusted font size */
+        font-size: 18px;
     }
 }
 @media all and (max-width: 425px){
     .About-me {
         margin-top: 0;
-        grid-template-columns: 1fr; /* Single column layout */
-        padding: 30px; /* Slightly more padding */
+        grid-template-columns: 1fr;
+        padding: 30px;
     }
     .about-text1 h2 {
-        font-size: 40px; /* Adjusted font size */
+        font-size: 40px;
     }
     .about-text1 h4 {
-        font-size: 24px; /* Adjusted font size */
+        font-size: 24px;
     }
     .about-img>img {
         height: 100%;
@@ -751,38 +751,38 @@ h2{
     .About-me {
         margin-top: 0;
         gap: 3.9rem;
-        grid-template-columns: 1fr; /* Single column layout */
-        padding: 40px; /* Reduced padding */
+        grid-template-columns: 1fr;
+        padding: 40px;
     }
     .about-text1 h2 {
-        font-size: 50px; /* Adjusted font size */
+        font-size: 50px;
     }
     .about-text1 h4 {
-        font-size: 28px; /* Adjusted font size */
+        font-size: 28px;
     }
     .about-text1 p {
-        font-size: 20px; /* Adjusted font size */
+        font-size: 20px;
     }
 }
 
 /*Desktop Type Devices*/
 @media all and (max-width: 1024px){
     .About-me {
-        padding: 50px; /* Keep padding for larger screens */
+        padding: 50px;
     }
     /*.about-img>img {
         width: ;
     }*/
     .about-text1 h2 {
-        font-size: 60px; /* Adjusted font size */
+        font-size: 60px;
     }
 }
 @media all and (max-width: 1440px){
     .About-me {
-        padding: 70px; /* Keep padding for larger screens */
+        padding: 70px;
     }
     .about-text1 h2 {
-        font-size: 65px; /* Adjusted font size */
+        font-size: 65px;
     }
 }
 
@@ -885,6 +885,11 @@ h2{
 }
 
 /* Responsive gallery for smaller screens */
+@media all and (max-width: 320px){
+    .Gallery h1{
+        font-size: 2.5em;
+    }
+}
 @media (max-width: 768px) {
     .Gallery section {
         flex-direction: column;
@@ -955,78 +960,79 @@ h2{
 /*Mobile Type Devices*/
 @media all and (max-width: 320px){
     .project {
-        padding: 20px; /* Reduced padding */
+        padding: 20px;
     }
     .project > div {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
+        margin-left: -40px;
     }
     .project-card {
-        padding: 2rem; /* Reduced padding */
+        padding: 2rem;
     }
     .project-card h2 {
-        font-size: 1rem; /* Smaller font size */
+        font-size: 1rem;
     }
     .project-card h3 {
-        font-size: 1.5rem; /* Smaller font size */
+        font-size: 1.5rem;
     }
     .project-card img {
-        width: 80vw; /* Wider image on smaller screens */
+        width: 80vw;
     }
 }
 @media all and (max-width: 375px){
     .project {
-        padding: 30px; /* Adjusted padding */
+        padding: 30px;
     }
     .project > div {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
     }
     .project-card h2 {
-        font-size: 1.1rem; /* Adjusted font size */
+        font-size: 1.1rem;
     }
     .project-card h3 {
-        font-size: 1.8rem; /* Adjusted font size */
+        font-size: 1.8rem;
     }
 }
 @media all and (max-width: 425px){
     .project {
-        padding: 40px; /* Adjusted padding */
+        padding: 40px;
     }
     .project > div {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
     }
     .project-card {
-        padding: 2.5rem; /* Adjusted padding */
+        padding: 2.5rem;
     }
 }
 
 /*Tab Type Devices*/
 @media all and (max-width: 768px) {
     .project {
-        padding: 50px; /* Slightly increased padding */
+        padding: 50px;
     }
 
     .project > div {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for smaller cards */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .project-card h3 {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem;
     }
 }
 
 /*Desktop Type Devices*/
 @media all and (max-width: 1024px){
     .project > div {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Maintain card size */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 @media all and (max-width: 1440px) {
     .project > div {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Maintain card size */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .project-card h3 {
-        font-size: 2.2rem; /* Adjusted font size */
+        font-size: 2.2rem;
     }
 }
 
@@ -1118,100 +1124,70 @@ h2{
 }
 
 @media all and (max-width: 320px){
-    .assignment {
-        min-height: 30vh; /* Increased height for better spacing */
-        padding: 20px; /* Added padding */
-    }
-    .assignment > h2 {
-        font-size: 30px; /* Smaller font size */
-        top: -20px; /* Adjust position */
-    }
-    .wrapper {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center items */
-        width: 100%; /* Full width */
-    }
-    .card {
-        width: 90%; /* Full width on small screens */
-        height: auto; /* Adjust height */
-        padding: 1rem; /* Reduced padding */
-    }
-    .info > p {
-        font-size: 12px; /* Smaller font size */
+    .assignment .wrapper .card{
+        margin-left: 53px;
     }
 }
-/*@media all and (max-width: 375px){
-    .assignment > h2 {
-        font-size: 35px; !* Adjusted font size *!
-        top: -30px; !* Adjust position *!
-    }
-    .wrapper {
-        flex-direction: column; !* Stack cards vertically *!
-        align-items: center; !* Center items *!
-    }
-    .card {
-        width: 90%; !* Full width *!
-        height: auto; !* Adjust height *!
+@media all and (max-width: 375px){
+    .assignment .wrapper .card{
+        margin-left: 10px;
     }
 }
 @media all and (max-width: 425px){
     .assignment > h2 {
-        font-size: 40px; !* Adjusted font size *!
-        top: -40px; !* Adjust position *!
+        position: absolute;
+        display: none;
     }
-    .wrapper {
-        flex-direction: column; !* Stack cards vertically *!
-        align-items: center; !* Center items *!
+    .assignment .card{
+        margin-left: -8px;
     }
-    .card {
-        width: 90%; !* Full width *!
-        height: auto; !* Adjust height *!
-    }
+
 }
 
-!*Tab Type Devices*!
+/*!*Tab Type Devices*!*/
 @media all and (max-width: 768px) {
     .assignment {
-        padding: 40px; !* Increased padding *!
+        padding: 40px;
     }
     .assignment > h2 {
-        font-size: 50px; !* Adjusted font size *!
+        font-size: 50px;
     }
     .wrapper {
-        flex-direction: row; !* Keep cards in a row *!
-        flex-wrap: wrap; !* Allow wrapping *!
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .card {
-        width: calc(50% - 20px); !* Two cards per row *!
-        height: auto; !* Adjust height *!
+        margin-left: -50px;
+        width: 75vw;
+        height: auto;
     }
 }
 
-!*Desktop Type Devices*!
+/*!*Desktop Type Devices*!*/
 @media all and (max-width: 1024px){
     .assignment > h2 {
-        font-size: 60px; !* Adjusted font size *!
+        font-size: 60px;
     }
     .wrapper {
-        flex-direction: row; !* Keep cards in a row *!
+        flex-direction: row;
     }
     .card {
-        width: calc(33.33% - 20px); !* Three cards per row *!
-        height: auto; !* Adjust height *!
+        width: 75vw;
+        height: auto;
     }
 }
 @media all and (max-width: 1440px) {
     .assignment > h2 {
-        font-size: 70px; !* Adjusted font size *!
+        font-size: 70px;
     }
     .wrapper {
-        flex-direction: row; !* Keep cards in a row *!
+        flex-direction: row;
     }
     .card {
-        width: calc(25% - 20px); !* Four cards per row *!
-        height: auto; !* Adjust height *!
+        width: 75vw;
+        height: auto;
     }
-}*/
+}
 @media all and (max-width: 1200px){
     .assignment{
         padding-top: 150px;
@@ -1318,89 +1294,92 @@ h2{
 
 @media all and (max-width: 320px){
     .tools-section {
-        padding: 100px 10px; /* Reduced padding */
+        padding: 100px 10px;
     }
     .tools-section h2 {
-        font-size: 2em; /* Smaller font size */
-        top: -40px; /* Adjust position */
+        font-size: 2.5em;
+        top: -40px;
+    }
+    #toolHead{
+        font-size: 2.5em;
     }
     .tools-section p {
-        font-size: 1em; /* Smaller font size */
-        top: -30px; /* Adjust position */
+        font-size: 1em;
+        top: -30px;
     }
     .tools-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
     .tool-item {
-        padding: 10px 15px; /* Reduced padding */
-        font-size: 0.8em; /* Smaller font size */
+        padding: 10px 15px;
+        font-size: 0.8em;
     }
 }
 @media all and (max-width: 375px){
     .tools-section {
-        padding: 150px 15px; /* Adjusted padding */
+        padding: 150px 15px;
     }
     .tools-section h2 {
-        font-size: 2.5em; /* Smaller font size */
-        top: -60px; /* Adjust position */
+        font-size: 2.5em;
+        top: -60px;
     }
     .tools-section p {
-        font-size: 1.1em; /* Smaller font size */
-        top: -40px; /* Adjust position */
+        font-size: 1.1em;
+        top: -40px;
     }
     .tool-item {
-        padding: 12px 20px; /* Reduced padding */
-        font-size: 0.85em; /* Smaller font size */
+        padding: 12px 20px;
+        font-size: 0.85em;
     }
 }
 @media all and (max-width: 425px){
     .tools-section {
-        padding: 180px 20px; /* Adjusted padding */
+        padding: 180px 20px;
     }
     .tools-section h2 {
-        font-size: 2.5em; /* Adjusted font size */
-        top: -70px; /* Adjust position */
+        font-size: 2.5em;
+        top: -70px;
     }
     .tools-section p {
-        font-size: 1.2em; /* Adjusted font size */
-        top: -50px; /* Adjust position */
+        font-size: 1.2em;
+        top: -50px;
     }
 }
 
 /*Tab Type Devices*/
 @media all and (max-width: 768px) {
     .tools-section {
-        padding: 180px 20px; /* Maintain padding */
+        padding: 180px 20px;
     }
     .tools-section h2 {
-        font-size: 3.2em; /* Adjusted font size */
+        font-size: 3.2em;
     }
     .tools-section p {
-        font-size: 1.2em; /* Maintain font size */
+        font-size: 1.2em;
     }
     .tool-item {
-        padding: 15px 20px; /* Adjust padding */
-        font-size: 0.9em; /* Maintain font size */
+        padding: 15px 20px;
+        font-size: 0.9em;
     }
 }
 
 /*Desktop Type Devices*/
 @media all and (max-width: 1024px){
     .tools-section {
-        padding: 200px 20px; /* Maintain padding */
+        padding: 200px 20px;
     }
     .tool-item {
-        padding: 15px 25px; /* Maintain padding */
-        font-size: 0.9em; /* Maintain font size */
+        padding: 15px 25px;
+        font-size: 0.9em;
     }
 }
 @media all and (max-width: 1440px) {
     .tools-section {
-        padding: 200px 20px; /* Maintain padding */
+        padding: 200px 20px;
     }
     .tools-section h2 {
-        font-size: 3.5em; /* Maintain font size */
+        font-size: 3.5em;
     }
 }
 
@@ -1690,74 +1669,74 @@ footer .wave{
 
 @media all and (max-width: 320px){
     footer {
-        padding: 10px 20px; /* Reduced padding */
-        min-height: 80px; /* Adjusted min-height */
+        padding: 10px 20px;
+        min-height: 80px;
     }
     .soIcon > li, .menu > li {
-        gap: 15px; /* Reduced gap */
+        gap: 15px;
     }
     .soIcon > li > a, .menu > li > a {
-        font-size: 1.8rem; /* Smaller icon size */
+        font-size: 1.8rem;
     }
     .menu > li > a {
-        font-size: 0.9rem; /* Smaller menu font size */
+        font-size: 0.9rem;
     }
     footer > p {
-        font-size: 0.9em; /* Smaller footer text */
+        font-size: 0.9em;
     }
 }
 @media all and (max-width: 375px){
     footer {
-        padding: 15px 25px; /* Adjusted padding */
+        padding: 15px 25px;
     }
     .soIcon > li > a, .menu > li > a {
-        font-size: 2rem; /* Smaller icon size */
+        font-size: 2rem;
     }
     .menu > li > a {
-        font-size: 0.95rem; /* Adjusted menu font size */
+        font-size: 0.95rem;
     }
 }
 @media all and (max-width: 425px){
     footer {
-        padding: 20px 30px; /* Maintain padding */
+        padding: 20px 30px;
     }
     .soIcon > li > a, .menu > li > a {
-        font-size: 2.2rem; /* Adjusted icon size */
+        font-size: 2.2rem;
     }
     .menu > li > a {
-        font-size: 1rem; /* Maintain menu font size */
+        font-size: 1rem;
     }
 }
 
 /*Tab Type Devices*/
 @media all and (max-width: 768px) {
     footer {
-        padding: 20px 40px; /* Maintain padding */
+        padding: 20px 40px;
     }
     .soIcon > li > a, .menu > li > a {
-        font-size: 2.5rem; /* Maintain icon size */
+        font-size: 2.5rem;
     }
     .menu > li > a {
-        font-size: 1rem; /* Maintain menu font size */
+        font-size: 1rem;
     }
 }
 
 /*Desktop Type Devices*/
 @media all and (max-width: 1024px){
     footer {
-        padding: 20px 50px; /* Maintain padding */
+        padding: 20px 50px;
     }
 }
 @media all and (max-width: 1440px) {
     footer {
-        padding: 20px 50px; /* Maintain padding */
+        padding: 20px 50px;
     }
 
     .soIcon > li > a, .menu > li > a {
-        font-size: 2.5rem; /* Maintain icon size */
+        font-size: 2.5rem;
     }
 
     .menu > li > a {
-        font-size: 1rem; /* Maintain menu font size */
+        font-size: 1rem;
     }
 }
