@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="assest/StyleSheet/normalize.css">
 
-<!--    <link rel="stylesheet" href="assest/StyleSheet/stylesheet2.css">-->
+    <!--    <link rel="stylesheet" href="assest/StyleSheet/stylesheet2.css">-->
     <link rel="stylesheet" href="indexStylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -61,7 +61,7 @@
 <!--home-->
 <section class="S1-HomePage">
     <!--Navigation List-->
-    <header class="header">
+    <!--<header class="header">
         <div>
             <h1 class="HeaderName">Pabo</h1>
         </div>
@@ -90,7 +90,28 @@
             <li><a href="index.html#tools_Section">Tools</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </div>
+    </header>-->
+    <header class="header">
+        <div>
+            <h1 class="HeaderName">Pabo</h1>
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <li><a href="index.html#about">Home</a></li>
+                <li><a href="index.html#Service">Service</a></li>
+                <li><a href="index.html#About-me">AboutMe</a></li>
+                <li><a href="index.html#About-me">Gallery</a></li>
+                <li><a href="index.html#project">Projects</a></li>
+                <li><a href="index.html#assignment">Assignment</a></li>
+                <li><a href="index.html#tools_Section">Tools</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="" id="menu-icon" style="font-size: 25px;"><i class="fa-solid fa-bars"></i></div>
+
     </header>
+
 
     <section id="about" class="about">
         <div class="about-container">
@@ -102,10 +123,6 @@
                     <h1 id="Hello-Word">Hello it's me</h1>
                     <h1 id="My-name">Paboda Hitigama</h1>
                     <h2 id="i-am-Developer">Welcome to my web developer portfolio..........</h2>
-                </div>
-
-                <div class="btn-group">
-                    <a href="#" class="btn">Download CV</a>
                 </div>
 
                 <div class="social">
@@ -131,7 +148,7 @@
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <h4>Software Development</h4>
-                <p>
+                <p class="para_1">
                     As a committed software developer, I provide end-to-end software development services customized to
                     address the specific requirements of my clients. My skills encompass the design, development, and
                     maintenance of top-tier software applications that propel business growth and success.
@@ -144,7 +161,7 @@
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <h4>Specialized Services</h4>
-                <p>
+                <p class="para_1">
                     By providing these specialized services, I strive to deliver complete software development solutions
                     that meet your unique business needs, driving success and growth in the digital landscape through
                     innovative, reliable, and efficient software tailored to your goals.
@@ -156,13 +173,12 @@
                 <div class="iconS">
                     <i class="fa-solid fa-file"></i>
                 </div>
-                <h4> Project-Based Services</h4>
-                <p>
+                <h4>Project-Based Services</h4>
+                <p class="para_1">
                     Need a custom software solution? Our project-based services deliver high-end, tailored applications
                     designed to transform your business. Avoid generic solutions that waste time and resources—let us
                     create the perfect software to meet your unique needs.
                 </p>
-
             </div>
         </div>
         <div class="columnS">
@@ -171,7 +187,7 @@
                     <i class="fa-brands fa-figma"></i>
                 </div>
                 <span>Design System & UX</span>
-                <p>
+                <p class="para_1">
                     Want a well-structured design system and intuitive user experience? Our Design System & UX services
                     offer a cohesive framework that ensures consistent design and user-friendly interfaces across your
                     applications. Elevate your brand and streamline development with custom solutions tailored to your
@@ -181,7 +197,6 @@
         </div>
     </div>
 </section>
-
 
 <!--About section-->
 <section class="About-me" id="About-me">
@@ -200,7 +215,7 @@
             real-world challenges.
         </p>
 
-        <a href="#" class="btn">Download My CV</a>
+        <a href="#" class="btn" id="btnCV">Download My CV</a>
     </div>
 </section>
 
@@ -272,7 +287,7 @@
 
 <!--Assignment Section-->
 <section id="assignment" class="assignment project">
-<!--    <h2 class="section_title">Recent Assignments</h2><br>-->
+    <!--    <h2 class="section_title">Recent Assignments</h2><br>-->
     <div class="wrapper">
         <div class="card">
             <img src="assest/images/assignment/img1.png">
@@ -333,6 +348,7 @@
         </div>
     </div>
 </section>
+
 <!--tool page-->
 <section id="tools_Section" class="tools-section">
     <h2 id="toolHead">Tools & Technologies</h2>
@@ -447,6 +463,7 @@
             JetBrains Tools</div>-->
     </div>
 </section>
+
 <!--contact page-->
 <section id="contact" class="contact">
     <!-- Contact form -->
